@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Quicksand',
+     sans-serif;
+     background-color: #e1e5ea;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+h2{
+    font-size: 12rem;
+    color: #03a9f4;
+    text-align: center;
+}
+
+h2 span{
+    position: relative;
+    display: inline-flex;
+    color: #03a9f4;
+}
+
+h2 span:nth-child(odd)
+{
+    letter-spacing: -1em;
+    line-height: 1em;
+    color: #414141;
+    overflow: hidden;
+    transition:0.5s ease-in-out;
+}
+
+h2:hover span:nth-child(odd){
+    letter-spacing: 0;
+}
+
+h2 span:nth-child(2){
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h2 span:nth-child(2)::before{
+    content: '2';
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    font-size: 0.35em;
+}
+
+h2 i{
+    position: absolute;
+    font-size: 2rem;
+    color: #777;
+    font-weight: 600;
+    font-style: initial;
+    line-height: 1em;
+    transform: translate(-50%);
+}
+
+h2 i::before{
+    position: absolute;
+    text-align: center;
+    content: 'Oxygen';
+    width: 100%;
+    display: initial;
+    transition: 0.5s;
+}
+h2:hover i::before{
+    opacity: 0;
+    letter-spacing: 2em;
+}
+
+h2 i::after{
+    content: 'Helping India To Breath';
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+h2:hover i::after{
+    opacity: 1;
+    visibility: visible;
+}
